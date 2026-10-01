@@ -1,6 +1,7 @@
 # Flight Booking Management System
 
 Flight Booking Management System is a Spring Boot REST API project developed to manage flights, passengers, bookings, and payments.
+
 The project uses Spring Data JPA and Hibernate for database operations and PostgreSQL for data storage. APIs are tested using Postman.
 
 ## Tech Stack
@@ -54,6 +55,7 @@ The project uses Spring Data JPA and Hibernate for database operations and Postg
 
 ## Project Structure
 
+```text
 src/main/java
 └── jsp.springboot
     ├── controller
@@ -62,9 +64,11 @@ src/main/java
     ├── entity
     ├── dto
     └── exception
+```
 
 The project follows a simple layered architecture:
 
+```text
 Controller
     ↓
 Service
@@ -72,21 +76,28 @@ Service
 Repository
     ↓
 PostgreSQL
+```
 
 ## Database
 
 PostgreSQL is used as the database.
 
 Configure the database connection in:
+
+```text
 src/main/resources/application.properties
+```
 
 Example:
+
+```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/LibDB
 spring.datasource.username=postgres
 spring.datasource.password=YOUR_PASSWORD
 
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
+```
 
 Use your own PostgreSQL password in the local configuration.
 
@@ -94,7 +105,9 @@ Use your own PostgreSQL password in the local configuration.
 
 ### 1. Clone the repository
 
+```bash
 git clone https://github.com/payal-2611/flight-booking-management.git
+```
 
 ### 2. Open the project
 
@@ -108,36 +121,46 @@ Create the required database and update the database username and password in `a
 
 Run the Spring Boot main class.
 
-The application runs on: 
+The application runs on:
 
+```text
 http://localhost:8080
+```
 
 ## API Endpoints
 
 ### Flight
 
+```text
 POST    /flight
 GET     /flight
 GET     /flight/{id}
 PUT     /flight/{id}
 DELETE  /flight/{id}
+```
 
 ### Passenger
 
+```text
 POST    /passenger
 GET     /passenger/{id}
 PUT     /passenger/{id}
 DELETE  /passenger/{id}
+```
 
 ### Booking
 
+```text
 POST    /booking
 GET     /booking/{id}
+```
 
 ### Payment
 
+```text
 POST    /payment
 GET     /payment/{id}
+```
 
 Additional search and filtering endpoints are available in the respective controllers.
 
@@ -147,13 +170,16 @@ The APIs were tested using Postman.
 
 The project covers common HTTP operations such as:
 
+```text
 GET
 POST
 PUT
 DELETE
+```
 
 ## Entity Relationship
 
+```text
 Flight
   |
   | 1 : Many
@@ -163,6 +189,7 @@ Booking
   |       |
   ↓       ↓
 Passenger Payment
+```
 
 A booking is associated with a flight and can contain multiple passengers and a payment.
 
@@ -180,7 +207,7 @@ A booking is associated with a flight and can contain multiple passengers and a 
 
 ## Author
 
-Payal Sahu
+**Payal Sahu**
 
 B.Tech - Computer Science and Engineering
 
