@@ -92,7 +92,7 @@ Example:
 
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/LibDB
-spring.datasource.username=postgres
+spring.datasource.username=YOUR_USERNAME
 spring.datasource.password=YOUR_PASSWORD
 
 spring.jpa.hibernate.ddl-auto=update
